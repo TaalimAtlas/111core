@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP & CRM Sur Mesure — FADIZ Agency | Odoo Maroc</title>
+  <meta name="description" content="Déploiement ERP Odoo, CRM et solutions métier sur mesure pour PME. Kénitra, Maroc. ROI en 5 mois. À partir de 8 000 MAD.">
+  <meta property="og:title" content="ERP & CRM Sur Mesure — FADIZ Agency | Odoo Maroc">
+  <meta property="og:description" content="Déploiement ERP Odoo, CRM et solutions métier sur mesure pour PME. Kénitra, Maroc. ROI en 5 mois. À partir de 8 000 MAD.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fadiz.agency/service-erp.html">
+  <meta property="og:image" content="https://fadiz.agency/img/og-service-erp.jpg">
+  <link rel="canonical" href="https://fadiz.agency/service-erp.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FADIZ Agency",
+    "description": "Agence digitale B2B — création de sites web, Google Ads, GEO/SEO, ERP.",
+    "url": "https://fadiz.agency",
+    "telephone": "+212663893696",
+    "email": "contact@fadiz.agency",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "31 Rue Martir Abdeslam, Bureau N°2, Val Fleury",
+      "addressLocality": "Kénitra",
+      "postalCode": "14000",
+      "addressCountry": "MA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.261,
+      "longitude": -6.5802
+    },
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "priceRange": "MAD",
+    "sameAs": [
+      "https://wa.me/212663893696"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- FLOATS -->
+  <a href="https://wa.me/212663893696?text=Salam%2C+je+voudrais+un+devis." class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <button class="float-devis" data-modal-open><i class="fa-solid fa-bolt"></i> Devis rapide</button>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" data-modal-close>&times;</button>
+      <p class="section-label">Offre limitée</p>
+      <h2 id="modal-title">Audit Digital Gratuit</h2>
+      <p style="color:var(--muted);margin-bottom:1.5rem">Analyse complète sous 24h — sans engagement.</p>
+      <form>
+        <div class="form-row">
+          <div class="form-group"><label>Prénom *</label><input type="text" name="prenom" required placeholder="Votre prénom"></div>
+          <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="votre@email.com"></div>
+        </div>
+        <div class="form-group"><label>Besoin *</label><select name="besoin" required><option value="">— Choisir —</option><option>Site web</option><option>Google Ads</option><option>GEO/SEO</option><option>ERP</option><option>Conseil</option></select></div>
+        <button type="submit" class="btn-primary btn-full">Demander mon audit <i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo"><span style="font-weight:800;font-size:1.4rem;color:#fff;letter-spacing:-.02em">FADIZ<span style="color:#a78bfa">.</span></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="geo-seo.html">GEO/SEO</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="https://wa.me/212663893696" class="nav-wa" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+        <button class="btn-primary btn-sm" data-modal-open>Audit gratuit</button>
+      </div>
+      <button class="hamburger" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobile-drawer">
+    <div id="drawer-overlay"></div>
+    <div class="drawer-panel">
+      <button class="drawer-close" id="drawer-close">&times;</button>
+      <a href="index.html" class="drawer-logo"><span style="font-weight:800;font-size:1.5rem">FADIZ<span style="color:#a78bfa">.</span></span></a>
+      <ul>
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+        <li><a href="services.html"><i class="fa-solid fa-layer-group"></i> Services</a></li>
+        <li><a href="geo-seo.html"><i class="fa-solid fa-map-location-dot"></i> GEO/SEO</a></li>
+        <li><a href="portfolio.html"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-users"></i> À propos</a></li>
+        <li><a href="faq.html"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div style="padding:1.5rem"><button class="btn-primary btn-full" data-modal-open>Audit gratuit</button></div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- SECTION 1: HERO MINI -->
+    <section class="hero-mini" style="background:var(--hero-bg)">
+      <div class="container hero-mini-inner">
+        <p class="section-label">ERP & CRM</p>
+        <h1>Automatisez. Centralisez. Gagnez en Productivité.</h1>
+        <p class="hero-subtitle">Déploiement Odoo & solutions ERP/CRM sur mesure pour PME. Formation incluse. Support 6 mois.</p>
+        <div class="hero-ctas">
+          <button data-modal-open class="btn-primary btn-lg">Démo gratuite →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: MODULES ODOO -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Ce Que Nous Déployons</h2>
+        <div class="cards-grid cards-grid-4">
+          <div class="card card-compact">
+            <div class="card-icon"><i class="fa-solid fa-boxes-stacking"></i></div>
+            <h3>Gestion des Stocks</h3>
+          </div>
+          <div class="card card-compact">
+            <div class="card-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h3>Ventes & Facturation</h3>
+          </div>
+          <div class="card card-compact">
+            <div class="card-icon"><i class="fa-solid fa-truck"></i></div>
+            <h3>Achats & Fournisseurs</h3>
+          </div>
+          <div class="card card-compact">
+            <div class="card-icon"><i class="fa-solid fa-users-gear"></i></div>
+            <h3>RH & Paie</h3>
+          </div>
+          <div class="card card-compact">
+            <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h3>Comptabilité</h3>
+          </div>
+          <div class="card card-compact">
+            <div class="card-icon"><i class="fa-solid fa-headset"></i></div>
+            <h3>CRM & Support Client</h3>
+          </div>
+          <div class="card card-compact">
+            <div class="card-icon"><i class="fa-solid fa-industry"></i></div>
+            <h3>Production & MRP</h3>
+          </div>
+          <div class="card card-compact">
+            <div class="card-icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <h3>Projets & Planning</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TIMELINE -->
+    <section class="section" style="background:var(--violet)">
+      <div class="container">
+        <h2 class="section-title" style="color:#fff">Déploiement en 5 Étapes</h2>
+        <div class="timeline timeline-dark">
+          <div class="timeline-item">
+            <div class="timeline-marker">1</div>
+            <div class="timeline-content">
+              <h3>Semaine 1 — Audit des Processus</h3>
+              <p>Analyse de vos flux actuels, identification des goulots, cartographie des besoins.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker">2</div>
+            <div class="timeline-content">
+              <h3>Semaine 2 — Configuration</h3>
+              <p>Paramétrage Odoo, création des flux, import des données existantes.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker">3</div>
+            <div class="timeline-content">
+              <h3>Semaines 3–4 — Développement Sur Mesure</h3>
+              <p>Modules spécifiques, intégrations tierces (e-commerce, banque, logistique).</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker">4</div>
+            <div class="timeline-content">
+              <h3>Semaine 5 — Formation</h3>
+              <p>Formation clé en main pour tous les profils : utilisateurs, managers, admin.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker">5</div>
+            <div class="timeline-content">
+              <h3>Semaine 6+ — Support</h3>
+              <p>Support WhatsApp 6 mois, corrections bugs, évolutions mineures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PRICING -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Nos Formules ERP</h2>
+        <div class="pricing-grid">
+
+          <div class="pricing-card">
+            <h3>ERP Base</h3>
+            <div class="pricing-price">8 000 <span>MAD</span></div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Jusqu'à 5 utilisateurs</li>
+              <li><i class="fa-solid fa-check"></i> 3 modules</li>
+              <li><i class="fa-solid fa-check"></i> Formation 4h</li>
+              <li><i class="fa-solid fa-check"></i> Support 3 mois</li>
+            </ul>
+            <button data-modal-open class="btn-primary btn-full">Commander</button>
+          </div>
+
+          <div class="pricing-card pricing-featured">
+            <span class="pricing-badge">Populaire</span>
+            <h3>ERP Avancé</h3>
+            <div class="pricing-price">18 000 <span>MAD</span></div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Jusqu'à 15 utilisateurs</li>
+              <li><i class="fa-solid fa-check"></i> 8 modules</li>
+              <li><i class="fa-solid fa-check"></i> Développement sur mesure</li>
+              <li><i class="fa-solid fa-check"></i> Formation 8h</li>
+              <li><i class="fa-solid fa-check"></i> Support 6 mois</li>
+            </ul>
+            <button data-modal-open class="btn-primary btn-full">Commander</button>
+          </div>
+
+          <div class="pricing-card">
+            <h3>ERP Entreprise</h3>
+            <div class="pricing-price">Sur <span>devis</span></div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Utilisateurs illimités</li>
+              <li><i class="fa-solid fa-check"></i> Tous modules</li>
+              <li><i class="fa-solid fa-check"></i> Intégrations</li>
+              <li><i class="fa-solid fa-check"></i> Formation complète</li>
+              <li><i class="fa-solid fa-check"></i> Support 12 mois</li>
+            </ul>
+            <button data-modal-open class="btn-primary btn-full">Demander un devis</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FAQ -->
+    <section class="section bg-light">
+      <div class="container container-md">
+        <h2 class="section-title">Questions Fréquentes</h2>
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              Odoo est-il adapté aux PME marocaines ?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-panel">
+              <p>Oui. Odoo est utilisé par 12+ millions d'utilisateurs dans le monde dont beaucoup de PME. Nous l'avons adapté aux spécificités fiscales et comptables marocaines (TVA, ICE, RIB IBAN).</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              Peut-on commencer avec quelques modules ?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-panel">
+              <p>Absolument. Odoo est modulaire. On commence souvent par Ventes + Facturation, puis on ajoute Stocks, CRM, RH selon vos priorités.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              Quid de la migration depuis notre logiciel actuel ?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-panel">
+              <p>Nous gérons l'import de vos données (clients, articles, historique). Le format peut varier (Excel, CSV, SQL). Délai supplémentaire : 3–5 jours selon le volume.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CTA -->
+    <section class="section cta-section" style="background:var(--blue)">
+      <div class="container" style="text-align:center">
+        <h2 style="color:#fff;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;margin-bottom:2rem">Transformez Votre Gestion Dès Aujourd'hui</h2>
+        <div class="hero-ctas" style="justify-content:center">
+          <button data-modal-open class="btn-primary btn-lg">Demander une démo gratuite</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" style="display:inline-block;margin-bottom:1rem"><span style="font-weight:800;font-size:1.4rem;color:#fff">FADIZ<span style="color:#a78bfa">.</span></span></a>
+        <p>Agence digitale B2B — Kénitra, Maroc.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/212663893696" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service-web.html">Sites web</a></li>
+          <li><a href="service-ads.html">Google Ads</a></li>
+          <li><a href="geo-seo.html">GEO / SEO</a></li>
+          <li><a href="service-erp.html">ERP & CRM</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Agence</h4>
+        <ul>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> 31 Rue Martir Abdeslam, Bureau N°2, Val Fleury, Kénitra 14000</li>
+          <li><a href="tel:+212663893696"><i class="fa-solid fa-phone"></i> +212 663 893 696</a></li>
+          <li><a href="mailto:contact@fadiz.agency"><i class="fa-solid fa-envelope"></i> contact@fadiz.agency</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FADIZ Agency — FDZ INTERNATIONAL SARL AU. Tous droits réservés.</p>
+      <div>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Confidentialité</a>
+        <a href="cgv.html">CGV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
