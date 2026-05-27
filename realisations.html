@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réalisations — FADIZ Agency | Études de cas B2B</title>
+  <meta name="description" content="Découvrez les réalisations de FADIZ Agency : études de cas détaillées, métriques réelles, stack utilisée. JS Dream Prestige, Dorsaf Beauty, FRA Connect, Gustalis, TaalimAtlas.">
+  <link rel="canonical" href="https://fadizagency.com/realisations.html">
+  <meta property="og:title" content="Réalisations FADIZ Agency — Proof of Work">
+  <meta property="og:description" content="50+ projets livrés. Des résultats mesurables, pas des promesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--purple:#320C57;--purple-mid:#4a1580;--sand:#EBE8E3;--white:#FFFFFF;--dark:#0A0A0A;--grey-100:#F7F6F3;--grey-400:#AFAFAF;--grey-600:#6B6B6B;--grey-800:#2A2A2A;--border:rgba(0,0,0,.07);--border-dark:rgba(255,255,255,.08)}
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);line-height:1.6;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased}
+    h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;line-height:1.05;letter-spacing:-.03em}
+    #cd,#cr{position:fixed;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
+    #cd{width:7px;height:7px;background:var(--purple);transition:width .15s,height .15s}
+    #cr{width:30px;height:30px;border:1.5px solid rgba(50,12,87,.5);transition:width .25s,height .25s,border-color .25s}
+    #cd.h{width:14px;height:14px}#cr.h{width:52px;height:52px;border-color:var(--purple)}
+    @media(hover:none),(max-width:1023px){body{cursor:auto}#cd,#cr{display:none}}
+    #sp{position:fixed;top:0;left:0;height:2px;background:var(--purple);z-index:9000;transform-origin:left;transform:scaleX(0)}
+    #navbar{position:fixed;inset:0 0 auto 0;z-index:500;padding:1.5rem 2.5rem;display:flex;align-items:center;justify-content:space-between;transition:background .35s,padding .35s,border-color .35s,box-shadow .35s}
+    #navbar.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(16px);padding:1rem 2.5rem;border-bottom:1px solid var(--border);box-shadow:0 2px 24px rgba(0,0,0,.04)}
+    .nav-logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:-.05em;color:var(--dark);text-decoration:none}
+    .nav-logo em{font-style:normal;color:var(--purple)}
+    .nav-links{display:flex;list-style:none;align-items:center;gap:2.25rem}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--dark);text-decoration:none;opacity:.6;transition:opacity .2s,color .2s}
+    .nav-links a:hover,.nav-links a.active{opacity:1;color:var(--purple)}
+    .nav-cta{opacity:1!important;background:var(--purple)!important;color:var(--white)!important;padding:.55rem 1.25rem!important;border-radius:6px!important;font-weight:600!important;font-size:.83rem!important}
+    .nav-cta:hover{background:var(--purple-mid)!important;transform:translateY(-1px)}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:510}
+    .hamburger span{display:block;width:22px;height:1.5px;background:var(--dark);transition:transform .3s,opacity .3s;transform-origin:center}
+    .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+    .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+    #mobile-nav{position:fixed;inset:0;background:var(--dark);z-index:490;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.25rem;opacity:0;pointer-events:none;transition:opacity .4s}
+    #mobile-nav.open{opacity:1;pointer-events:all}
+    #mobile-nav a{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.25rem,7vw,3.5rem);font-weight:700;color:rgba(255,255,255,.75);text-decoration:none;letter-spacing:-.04em;transition:color .2s}
+    #mobile-nav a:hover{color:var(--white)}
+    #mobile-nav .m-cta{background:var(--purple);color:var(--white)!important;font-size:1.2rem!important;padding:.85rem 2.5rem;border-radius:6px;margin-top:.5rem}
+    @media(max-width:767px){#navbar{padding:1.2rem 1.5rem}#navbar.scrolled{padding:.9rem 1.5rem}.nav-links{display:none}.hamburger{display:flex}}
+
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.875rem 1.875rem;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:.9375rem;font-weight:600;text-decoration:none;transition:background .2s,transform .2s,border-color .2s,color .2s,box-shadow .2s;white-space:nowrap}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--purple);color:var(--white);box-shadow:0 2px 16px rgba(50,12,87,.18)}
+    .btn-primary:hover{background:var(--purple-mid)}
+    .btn-ghost{background:transparent;color:var(--dark);border:1px solid rgba(0,0,0,.14)}
+    .btn-ghost:hover{border-color:var(--purple);color:var(--purple)}
+    .btn-sand{background:var(--sand);color:var(--purple)}
+    .btn-sand:hover{background:var(--white);box-shadow:0 4px 20px rgba(0,0,0,.12)}
+    .btn-outline-white{background:rgba(255,255,255,.08);color:var(--white);border:1px solid rgba(255,255,255,.18)}
+    .btn-outline-white:hover{background:rgba(255,255,255,.14)}
+    .btn-lg{padding:1.05rem 2.25rem;font-size:1rem}
+    .kicker{display:inline-flex;align-items:center;gap:.625rem;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-400);margin-bottom:1.375rem}
+    .kicker::before{content:'';display:block;width:18px;height:1px;background:currentColor}
+    .kicker.light{color:rgba(255,255,255,.35)}
+    .kicker.light::before{background:rgba(255,255,255,.35)}
+
+    /* hero */
+    .page-hero{padding:10rem 2.5rem 6rem;border-bottom:1px solid var(--border);background:var(--dark);position:relative;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
+    .page-hero-inner{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:3rem;flex-wrap:wrap}
+    .page-hero h1{font-size:clamp(3rem,8vw,8rem);letter-spacing:-.045em;line-height:.97;color:var(--white)}
+    .page-hero-right{max-width:320px}
+    .page-hero-right p{font-size:.9375rem;color:rgba(255,255,255,.45);line-height:1.65;margin-bottom:2rem}
+    @media(max-width:767px){.page-hero{padding:7rem 1.5rem 4rem}.page-hero-right{max-width:100%}}
+
+    /* filters */
+    .filters{padding:2.5rem 2.5rem;border-bottom:1px solid var(--border);display:flex;gap:.625rem;flex-wrap:wrap}
+    .filter-btn{font-size:.78rem;font-weight:600;padding:.45rem 1.1rem;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--grey-600);cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
+    .filter-btn:hover,.filter-btn.active{background:var(--purple);color:var(--white);border-color:var(--purple)}
+    @media(max-width:767px){.filters{padding:2rem 1.5rem}}
+
+    /* case grid */
+    .cases-grid{padding:4rem 2.5rem 6rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+    @media(max-width:1023px){.cases-grid{grid-template-columns:1fr}}
+    @media(max-width:767px){.cases-grid{padding:3rem 1.5rem 4rem}}
+
+    /* case expanded card */
+    .case-item{border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:box-shadow .3s,transform .3s;background:var(--white)}
+    .case-item:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.08)}
+    .case-item-hero{aspect-ratio:16/7;background:var(--dark);position:relative;display:flex;align-items:flex-end;padding:2rem;overflow:hidden}
+    .case-item-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.85),rgba(10,10,10,.2))}
+    .case-item-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-size:8rem;font-weight:800;color:rgba(255,255,255,.03);letter-spacing:-.1em;user-select:none}
+    .case-item-header{position:relative;z-index:2}
+    .case-sector-tag{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(50,12,87,.5);color:#c09af0;padding:.25rem .7rem;border-radius:20px;display:inline-block;margin-bottom:.75rem;border:1px solid rgba(50,12,87,.4)}
+    .case-client-name{font-family:'Bricolage Grotesque',sans-serif;font-size:1.75rem;font-weight:800;color:var(--white);letter-spacing:-.04em;display:block;margin-bottom:.25rem}
+    .case-location{font-size:.78rem;color:rgba(255,255,255,.4)}
+
+    .case-item-body{padding:2rem}
+    .case-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+    .case-metric-num{font-family:'Bricolage Grotesque',sans-serif;font-size:1.625rem;font-weight:800;letter-spacing:-.05em;color:var(--purple);display:block}
+    .case-metric-lbl{font-size:.7rem;color:var(--grey-400)}
+    .case-challenge{margin-bottom:1.75rem}
+    .case-section-label{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-400);margin-bottom:.625rem}
+    .case-challenge p{font-size:.9375rem;color:var(--grey-600);line-height:1.65}
+    .case-solution{margin-bottom:2rem}
+    .case-tags-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:2rem}
+    .case-tag{font-size:.7rem;font-weight:600;padding:.3rem .7rem;border-radius:6px;background:rgba(50,12,87,.07);color:var(--purple)}
+    .case-footer{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;border-top:1px solid var(--border)}
+    .case-footer a{font-size:.875rem;font-weight:600;color:var(--purple);text-decoration:none;display:flex;align-items:center;gap:.45rem;transition:gap .2s}
+    .case-footer a:hover{gap:.75rem}
+    @media(max-width:767px){.case-metrics{grid-template-columns:1fr 1fr}}
+
+    /* stats strip */
+    .stats-strip{padding:5rem 2.5rem;background:var(--purple);display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+    .stats-strip-num{font-family:'Bricolage Grotesque',sans-serif;font-size:3.5rem;font-weight:800;letter-spacing:-.06em;color:var(--sand);display:block}
+    .stats-strip-lbl{font-size:.78rem;color:rgba(255,255,255,.45)}
+    @media(max-width:767px){.stats-strip{grid-template-columns:1fr 1fr;padding:4rem 1.5rem}}
+
+    /* final cta */
+    .final-cta{padding:9rem 2.5rem;background:var(--white);text-align:center;border-top:1px solid var(--border)}
+    .final-cta h2{font-size:clamp(2.5rem,5vw,4rem);letter-spacing:-.04em;margin-bottom:1rem;max-width:600px;margin-left:auto;margin-right:auto}
+    .final-cta p{color:var(--grey-400);margin-bottom:2.75rem}
+    .cta-btns{display:flex;gap:.875rem;justify-content:center;flex-wrap:wrap}
+    @media(max-width:767px){.final-cta{padding:5rem 1.5rem}}
+
+    footer{background:var(--dark);color:var(--white);padding:5rem 2.5rem 2rem}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:4rem;margin-bottom:4rem}
+    .footer-logo{font-family:'Bricolage Grotesque',sans-serif;font-size:1.75rem;font-weight:800;letter-spacing:-.05em;margin-bottom:.75rem}
+    .footer-logo em{font-style:normal;color:var(--purple)}
+    .footer-tagline{font-size:.875rem;color:rgba(255,255,255,.4);line-height:1.55;margin-bottom:1.5rem}
+    .footer-certif{font-size:.7rem;color:rgba(255,255,255,.2);line-height:1.9}
+    .footer-col-title{font-family:'Bricolage Grotesque',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:1.25rem}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+    .footer-links a{font-size:.875rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:var(--white)}
+    .footer-ci{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.875rem}
+    .footer-ci i{color:var(--purple);margin-top:.1rem;width:16px;flex-shrink:0}
+    .footer-ci span,.footer-ci a{font-size:.85rem;color:rgba(255,255,255,.5);text-decoration:none;line-height:1.5;transition:color .2s}
+    .footer-ci a:hover{color:var(--white)}
+    .footer-social{display:flex;gap:.65rem;margin-top:1.5rem}
+    .footer-social a{width:34px;height:34px;border-radius:8px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);font-size:.8rem;text-decoration:none;transition:border-color .2s,color .2s,background .2s}
+    .footer-social a:hover{border-color:var(--purple);color:var(--white);background:rgba(50,12,87,.35)}
+    .footer-bar{border-top:1px solid rgba(255,255,255,.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;gap:1.25rem;flex-wrap:wrap}
+    .footer-bar-left{font-size:.75rem;color:rgba(255,255,255,.2)}
+    .footer-bar-right{display:flex;gap:1.5rem}
+    .footer-bar-right a{font-size:.75rem;color:rgba(255,255,255,.2);text-decoration:none;transition:color .2s}
+    .footer-bar-right a:hover{color:rgba(255,255,255,.6)}
+    @media(max-width:1023px){.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:767px){footer{padding:4rem 1.5rem 2rem}.footer-grid{grid-template-columns:1fr;gap:2.5rem}.footer-bar{flex-direction:column;align-items:flex-start}}
+    .gsap-up{opacity:0;transform:translateY(40px)}
+    [data-filter]{transition:opacity .35s,transform .35s}
+  </style>
+</head>
+<body>
+<div id="cd" aria-hidden="true"></div>
+<div id="cr" aria-hidden="true"></div>
+<div id="sp" aria-hidden="true"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navigation principale">
+  <a href="index.html" class="nav-logo">FAD<em>IZ</em></a>
+  <ul class="nav-links" role="list">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="realisations.html" class="active">Réalisations</a></li>
+    <li><a href="a-propos.html">À propos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Audit Gratuit</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="mobile-nav" role="dialog" aria-modal="true">
+  <a href="services.html">Services</a>
+  <a href="realisations.html">Réalisations</a>
+  <a href="a-propos.html">À propos</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="m-cta">Audit Gratuit →</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero" aria-labelledby="real-h1">
+  <div class="page-hero-inner">
+    <div>
+      <p class="kicker light">50+ projets livrés</p>
+      <h1 id="real-h1" class="gsap-up">Proof<br>of Work.</h1>
+    </div>
+    <div class="page-hero-right gsap-up">
+      <p>Des résultats réels, mesurables, vérifiables. Pas des mockups Dribbble — des systèmes qui tournent en production et génèrent des revenus.</p>
+      <a href="contact.html" class="btn btn-sand">Démarrer votre projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip" role="list" aria-label="Chiffres clés">
+  <div role="listitem">
+    <span class="stats-strip-num gsap-up">50+</span>
+    <span class="stats-strip-lbl">Projets livrés</span>
+  </div>
+  <div role="listitem">
+    <span class="stats-strip-num gsap-up">4.5×</span>
+    <span class="stats-strip-lbl">ROAS moyen</span>
+  </div>
+  <div role="listitem">
+    <span class="stats-strip-num gsap-up">−58%</span>
+    <span class="stats-strip-lbl">CPL moyen constaté</span>
+  </div>
+  <div role="listitem">
+    <span class="stats-strip-num gsap-up">6</span>
+    <span class="stats-strip-lbl">Marchés actifs</span>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filters" role="group" aria-label="Filtrer les réalisations">
+  <button class="filter-btn active" data-filter="all">Tous les projets</button>
+  <button class="filter-btn" data-filter="web">Web &amp; E-commerce</button>
+  <button class="filter-btn" data-filter="ads">Acquisition Payante</button>
+  <button class="filter-btn" data-filter="seo">SEO &amp; GEO</button>
+  <button class="filter-btn" data-filter="erp">ERP &amp; CRM</button>
+</div>
+
+<!-- CASES GRID -->
+<div class="cases-grid" id="cases-grid">
+
+  <article class="case-item gsap-up" data-filter="ads web" aria-labelledby="case-js">
+    <div class="case-item-hero">
+      <div class="case-item-bg">JS</div>
+      <div class="case-item-header">
+        <span class="case-sector-tag">VTC Premium</span>
+        <span id="case-js" class="case-client-name">JS Dream Prestige</span>
+        <span class="case-location">Maroc · France</span>
+      </div>
+    </div>
+    <div class="case-item-body">
+      <div class="case-metrics">
+        <div>
+          <span class="case-metric-num">5.1×</span>
+          <span class="case-metric-lbl">ROAS</span>
+        </div>
+        <div>
+          <span class="case-metric-num">+210%</span>
+          <span class="case-metric-lbl">Réservations</span>
+        </div>
+        <div>
+          <span class="case-metric-num">3 mois</span>
+          <span class="case-metric-lbl">Pour atteindre le résultat</span>
+        </div>
+      </div>
+      <div class="case-challenge">
+        <p class="case-section-label">Le défi</p>
+        <p>JS Dream Prestige — service VTC premium — avait un excellent produit mais une visibilité digitale quasi nulle. Les campagnes précédentes (gérées en interne) consommaient le budget sans générer de réservations qualifiées.</p>
+      </div>
+      <div class="case-solution">
+        <p class="case-section-label">Notre approche</p>
+        <p>Reconstruction complète du funnel : landing page dédiée + Meta Ads ciblage géo + Google Search sur les intentions premium. A/B test sur 4 accroches créatives. Optimisation hebdomadaire sur 12 semaines.</p>
+      </div>
+      <div class="case-tags-row">
+        <span class="case-tag">Meta Ads</span>
+        <span class="case-tag">Google Ads</span>
+        <span class="case-tag">Landing Page</span>
+        <span class="case-tag">A/B Testing</span>
+      </div>
+      <div class="case-footer">
+        <a href="contact.html" aria-label="Démarrer un projet similaire à JS Dream Prestige">
+          Résultat similaire → <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <span style="font-size:.75rem;color:var(--grey-400)">Maroc · France</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="case-item gsap-up" data-filter="ads web" aria-labelledby="case-db">
+    <div class="case-item-hero" style="background:#1a0a1f">
+      <div class="case-item-bg">DB</div>
+      <div class="case-item-header">
+        <span class="case-sector-tag">Cosmétiques Luxe</span>
+        <span id="case-db" class="case-client-name">Dorsaf Beauty</span>
+        <span class="case-location">Maroc · France · Belgique</span>
+      </div>
+    </div>
+    <div class="case-item-body">
+      <div class="case-metrics">
+        <div>
+          <span class="case-metric-num">4.2×</span>
+          <span class="case-metric-lbl">ROAS</span>
+        </div>
+        <div>
+          <span class="case-metric-num">+280%</span>
+          <span class="case-metric-lbl">Ventes en ligne</span>
+        </div>
+        <div>
+          <span class="case-metric-num">+45%</span>
+          <span class="case-metric-lbl">Panier moyen</span>
+        </div>
+      </div>
+      <div class="case-challenge">
+        <p class="case-section-label">Le défi</p>
+        <p>Dorsaf Beauty vendait via Instagram uniquement. Pas de site e-commerce, pas de tracking, pas de retargeting. L'objectif : créer une présence e-commerce premium et scaler l'acquisition sur 3 marchés simultanément.</p>
+      </div>
+      <div class="case-solution">
+        <p class="case-section-label">Notre approche</p>
+        <p>E-commerce WooCommerce luxe en 4 semaines. Catalogue 80+ produits avec photos remises à niveau. Meta Ads avec créatifs UGC sur TikTok + Meta. Remarketing catalogue dynamique. Ciblage FR/BE/MA avec créatifs localisés.</p>
+      </div>
+      <div class="case-tags-row">
+        <span class="case-tag">WooCommerce</span>
+        <span class="case-tag">Meta Ads</span>
+        <span class="case-tag">TikTok Ads</span>
+        <span class="case-tag">Retargeting</span>
+      </div>
+      <div class="case-footer">
+        <a href="contact.html" aria-label="Démarrer un projet similaire à Dorsaf Beauty">Résultat similaire → <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <span style="font-size:.75rem;color:var(--grey-400)">3 marchés</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="case-item gsap-up" data-filter="ads seo" aria-labelledby="case-fra">
+    <div class="case-item-hero" style="background:#0a1a2d">
+      <div class="case-item-bg">FRA</div>
+      <div class="case-item-header">
+        <span class="case-sector-tag">Formation Aéronautique</span>
+        <span id="case-fra" class="case-client-name">FRA Connect</span>
+        <span class="case-location">Maroc · UAE · Arabie Saoudite</span>
+      </div>
+    </div>
+    <div class="case-item-body">
+      <div class="case-metrics">
+        <div>
+          <span class="case-metric-num">+320%</span>
+          <span class="case-metric-lbl">Candidatures</span>
+        </div>
+        <div>
+          <span class="case-metric-num">−62%</span>
+          <span class="case-metric-lbl">Coût par lead</span>
+        </div>
+        <div>
+          <span class="case-metric-num">6 sem.</span>
+          <span class="case-metric-lbl">Pour les premiers résultats</span>
+        </div>
+      </div>
+      <div class="case-challenge">
+        <p class="case-section-label">Le défi</p>
+        <p>FRA Connect formait des candidats aux métiers aéronautiques mais ciblait 3 marchés à la fois (Maroc, UAE, Arabie Saoudite) avec un seul budget limité. CPL initial : 180€. Objectif : descendre sous 80€.</p>
+      </div>
+      <div class="case-solution">
+        <p class="case-section-label">Notre approche</p>
+        <p>Segmentation des audiences par pays + restructuration des campagnes Google Search sur des mots-clés long tail spécifiques. LinkedIn pour les prescripteurs RH. SEO sur les requêtes "formation aéronautique Maroc/UAE".</p>
+      </div>
+      <div class="case-tags-row">
+        <span class="case-tag">Google Ads</span>
+        <span class="case-tag">LinkedIn Outreach</span>
+        <span class="case-tag">SEO</span>
+        <span class="case-tag">Segmentation géo</span>
+      </div>
+      <div class="case-footer">
+        <a href="contact.html" aria-label="Démarrer un projet similaire à FRA Connect">Résultat similaire → <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <span style="font-size:.75rem;color:var(--grey-400)">B2B · International</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="case-item gsap-up" data-filter="web seo" aria-labelledby="case-gus">
+    <div class="case-item-hero" style="background:#1a1208">
+      <div class="case-item-bg">GS</div>
+      <div class="case-item-header">
+        <span class="case-sector-tag">E-commerce Artisanal</span>
+        <span id="case-gus" class="case-client-name">Gustalis</span>
+        <span class="case-location">Maroc · France</span>
+      </div>
+    </div>
+    <div class="case-item-body">
+      <div class="case-metrics">
+        <div>
+          <span class="case-metric-num">3 sem.</span>
+          <span class="case-metric-lbl">Temps de lancement</span>
+        </div>
+        <div>
+          <span class="case-metric-num">Top 3</span>
+          <span class="case-metric-lbl">Google SEO local</span>
+        </div>
+        <div>
+          <span class="case-metric-num">+185%</span>
+          <span class="case-metric-lbl">Trafic organique</span>
+        </div>
+      </div>
+      <div class="case-challenge">
+        <p class="case-section-label">Le défi</p>
+        <p>Gustalis — artisanat alimentaire haut de gamme — vendait uniquement en local. L'objectif : lancer un e-commerce en un minimum de temps et commencer à générer des commandes depuis la France dès le premier mois.</p>
+      </div>
+      <div class="case-solution">
+        <p class="case-section-label">Notre approche</p>
+        <p>WordPress WooCommerce avec thème sur mesure en 3 semaines. Catalogue 40 produits, intégration paiement multi-devises, calcul livraison automatique. SEO technique + contenu ciblé "épicerie fine marocaine France".</p>
+      </div>
+      <div class="case-tags-row">
+        <span class="case-tag">WordPress</span>
+        <span class="case-tag">WooCommerce</span>
+        <span class="case-tag">SEO technique</span>
+        <span class="case-tag">Livraison internationale</span>
+      </div>
+      <div class="case-footer">
+        <a href="contact.html" aria-label="Démarrer un projet similaire à Gustalis">Résultat similaire → <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <span style="font-size:.75rem;color:var(--grey-400)">Livré en 3 semaines</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="case-item gsap-up" data-filter="ads erp" aria-labelledby="case-ta">
+    <div class="case-item-hero" style="background:#0d1a0d">
+      <div class="case-item-bg">TA</div>
+      <div class="case-item-header">
+        <span class="case-sector-tag">EdTech</span>
+        <span id="case-ta" class="case-client-name">TaalimAtlas</span>
+        <span class="case-location">Maroc · Sénégal</span>
+      </div>
+    </div>
+    <div class="case-item-body">
+      <div class="case-metrics">
+        <div>
+          <span class="case-metric-num">+180%</span>
+          <span class="case-metric-lbl">Inscriptions</span>
+        </div>
+        <div>
+          <span class="case-metric-num">3.8×</span>
+          <span class="case-metric-lbl">ROAS</span>
+        </div>
+        <div>
+          <span class="case-metric-num">−40%</span>
+          <span class="case-metric-lbl">Charge admin</span>
+        </div>
+      </div>
+      <div class="case-challenge">
+        <p class="case-section-label">Le défi</p>
+        <p>TaalimAtlas — plateforme e-learning — gérait les inscriptions manuellement via WhatsApp et Excel. L'objectif double : scaler l'acquisition étudiante ET automatiser la gestion opérationnelle.</p>
+      </div>
+      <div class="case-solution">
+        <p class="case-section-label">Notre approche</p>
+        <p>Déploiement Odoo pour la gestion étudiants/formation. Landing pages optimisées + Meta Ads avec vidéo de témoignages. Funnel WhatsApp automatisé pour la qualification. Résultat en 90 jours.</p>
+      </div>
+      <div class="case-tags-row">
+        <span class="case-tag">Meta Ads</span>
+        <span class="case-tag">Odoo ERP</span>
+        <span class="case-tag">LMS Custom</span>
+        <span class="case-tag">WhatsApp Automation</span>
+      </div>
+      <div class="case-footer">
+        <a href="contact.html" aria-label="Démarrer un projet similaire à TaalimAtlas">Résultat similaire → <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <span style="font-size:.75rem;color:var(--grey-400)">EdTech · Afrique</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="case-item gsap-up" data-filter="web ads" aria-labelledby="case-dc">
+    <div class="case-item-hero" style="background:#1a1000">
+      <div class="case-item-bg">DC</div>
+      <div class="case-item-header">
+        <span class="case-sector-tag">Conciergerie Luxe</span>
+        <span id="case-dc" class="case-client-name">Dunes Conciergerie</span>
+        <span class="case-location">Maroc · UAE</span>
+      </div>
+    </div>
+    <div class="case-item-body">
+      <div class="case-metrics">
+        <div>
+          <span class="case-metric-num">2 sem.</span>
+          <span class="case-metric-lbl">Lancement site</span>
+        </div>
+        <div>
+          <span class="case-metric-num">+160%</span>
+          <span class="case-metric-lbl">Demandes de devis</span>
+        </div>
+        <div>
+          <span class="case-metric-num">4.0×</span>
+          <span class="case-metric-lbl">ROAS Ads</span>
+        </div>
+      </div>
+      <div class="case-challenge">
+        <p class="case-section-label">Le défi</p>
+        <p>Service de conciergerie premium au Maroc avec clientèle cible UAE et Europe. Besoin d'un site qui communique le luxe et d'une stratégie acquisition pour atteindre les clients haut de gamme à Dubai et en Europe.</p>
+      </div>
+      <div class="case-solution">
+        <p class="case-section-label">Notre approche</p>
+        <p>Site WordPress sur mesure avec aesthetic luxe désert marocain. Google Ads sur des requêtes "concierge Morocco luxury" en anglais/français/arabe. LinkedIn prospection ciblée sur les expatriés et décideurs Gulf.</p>
+      </div>
+      <div class="case-tags-row">
+        <span class="case-tag">WordPress</span>
+        <span class="case-tag">Google Ads</span>
+        <span class="case-tag">LinkedIn</span>
+        <span class="case-tag">Multilingue</span>
+      </div>
+      <div class="case-footer">
+        <a href="contact.html" aria-label="Démarrer un projet similaire à Dunes Conciergerie">Résultat similaire → <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <span style="font-size:.75rem;color:var(--grey-400)">Luxe · International</span>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+<!-- FINAL CTA -->
+<section class="final-cta" aria-labelledby="cta-h2">
+  <p class="kicker" style="justify-content:center">Votre projet</p>
+  <h2 id="cta-h2" class="gsap-up">Votre success story<br>commence ici.</h2>
+  <p>Décrivez-nous votre défi. On revient avec un plan en 24h.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn btn-primary btn-lg" aria-label="Démarrer un projet">
+      Démarrer mon projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+    </a>
+    <a href="https://wa.me/212663893696" class="btn btn-ghost btn-lg" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp FADIZ">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">FAD<em>IZ</em></div>
+      <p class="footer-tagline">We Build Systems That Sell.</p>
+      <div class="footer-certif"><div>FDZ INTERNATIONAL SARL AU</div><div>© 2025 Kénitra, Maroc</div></div>
+      <div class="footer-social" aria-label="Réseaux sociaux">
+        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://wa.me/212663893696" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title">Réalisations</p>
+      <ul class="footer-links">
+        <li><a href="#case-js">JS Dream Prestige</a></li>
+        <li><a href="#case-db">Dorsaf Beauty</a></li>
+        <li><a href="#case-fra">FRA Connect</a></li>
+        <li><a href="#case-gus">Gustalis</a></li>
+        <li><a href="#case-ta">TaalimAtlas</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Pages</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Contact</p>
+      <div class="footer-ci"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Kénitra, Maroc</span></div>
+      <div class="footer-ci"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/212663893696" target="_blank" rel="noopener noreferrer">+212 663 893 696</a></div>
+      <div class="footer-ci"><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:contact@fadizagency.com">contact@fadizagency.com</a></div>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <p class="footer-bar-left">© 2025 FDZ INTERNATIONAL SARL AU · Kénitra, Maroc</p>
+    <nav class="footer-bar-right" aria-label="Liens légaux"><a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">CGV</a></nav>
+  </div>
+</footer>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+(function(){
+  const dot=document.getElementById('cd'),ring=document.getElementById('cr');
+  if(dot&&ring&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});
+    (function raf(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(raf)})();
+    document.querySelectorAll('a,button').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{dot.classList.add('h');ring.classList.add('h')});
+      el.addEventListener('mouseleave',()=>{dot.classList.remove('h');ring.classList.remove('h')});
+    });
+  }
+  const sp=document.getElementById('sp');
+  window.addEventListener('scroll',()=>{
+    document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+    if(sp)sp.style.transform='scaleX('+(window.scrollY/(document.body.scrollHeight-window.innerHeight))+')';
+  },{passive:true});
+  const burger=document.getElementById('hamburger'),mnav=document.getElementById('mobile-nav');
+  burger.addEventListener('click',()=>{const o=mnav.classList.toggle('open');burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
+  mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mnav.classList.remove('open');burger.setAttribute('aria-expanded','false');document.body.style.overflow=''}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){mnav.classList.remove('open');burger.setAttribute('aria-expanded','false');document.body.style.overflow=''}});
+
+  // filter
+  document.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f=btn.dataset.filter;
+      document.querySelectorAll('.case-item').forEach(item=>{
+        const cats=item.dataset.filter||'';
+        if(f==='all'||cats.includes(f)){
+          item.style.opacity='1';item.style.transform='';item.style.pointerEvents='';
+        } else {
+          item.style.opacity='0';item.style.transform='scale(.97)';item.style.pointerEvents='none';
+        }
+      });
+    });
+  });
+
+  const def={duration:.85,ease:'power3.out'};
+  gsap.utils.toArray('.gsap-up').forEach((el,i)=>gsap.fromTo(el,{opacity:0,y:42},{...def,opacity:1,y:0,delay:(i%3)*.08,scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
+})();
+</script>
+</body>
+</html>

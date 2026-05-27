@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — FADIZ Agency | Web · ERP · Acquisition · SEO/GEO</title>
+  <meta name="description" content="Découvrez les 6 services de FADIZ Agency : ingénierie web, ERP & CRM, acquisition payante, SEO & GEO, branding et consulting. Résultats garantis.">
+  <link rel="canonical" href="https://fadizagency.com/services.html">
+  <meta property="og:title" content="Services FADIZ Agency — Architectures digitales B2B">
+  <meta property="og:description" content="6 pôles d'expertise pour construire des systèmes qui vendent. Résultats mesurables, ownership total.">
+  <meta property="og:url" content="https://fadizagency.com/services.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --purple:#320C57;--purple-mid:#4a1580;--sand:#EBE8E3;
+      --white:#FFFFFF;--dark:#0A0A0A;--grey-100:#F7F6F3;
+      --grey-400:#AFAFAF;--grey-600:#6B6B6B;--grey-800:#2A2A2A;
+      --border:rgba(0,0,0,.07);--border-dark:rgba(255,255,255,.08);
+    }
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);line-height:1.6;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased}
+    h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;line-height:1.05;letter-spacing:-.03em}
+
+    /* cursor */
+    #cd,#cr{position:fixed;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);will-change:left,top}
+    #cd{width:7px;height:7px;background:var(--purple);transition:width .15s,height .15s}
+    #cr{width:30px;height:30px;border:1.5px solid rgba(50,12,87,.5);transition:width .25s,height .25s,border-color .25s}
+    #cd.h{width:14px;height:14px}#cr.h{width:52px;height:52px;border-color:var(--purple)}
+    @media(hover:none),(max-width:1023px){body{cursor:auto}#cd,#cr{display:none}}
+
+    /* progress */
+    #sp{position:fixed;top:0;left:0;height:2px;background:var(--purple);z-index:9000;transform-origin:left;transform:scaleX(0)}
+
+    /* navbar */
+    #navbar{position:fixed;inset:0 0 auto 0;z-index:500;padding:1.5rem 2.5rem;display:flex;align-items:center;justify-content:space-between;transition:background .35s,padding .35s,border-color .35s,box-shadow .35s}
+    #navbar.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(16px);padding:1rem 2.5rem;border-bottom:1px solid var(--border);box-shadow:0 2px 24px rgba(0,0,0,.04)}
+    .nav-logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:-.05em;color:var(--dark);text-decoration:none}
+    .nav-logo em{font-style:normal;color:var(--purple)}
+    .nav-links{display:flex;list-style:none;align-items:center;gap:2.25rem}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--dark);text-decoration:none;opacity:.6;transition:opacity .2s,color .2s}
+    .nav-links a:hover,.nav-links a.active{opacity:1;color:var(--purple)}
+    .nav-cta{opacity:1!important;background:var(--purple)!important;color:var(--white)!important;padding:.55rem 1.25rem!important;border-radius:6px!important;font-weight:600!important;font-size:.83rem!important;transition:background .2s,transform .2s!important}
+    .nav-cta:hover{background:var(--purple-mid)!important;transform:translateY(-1px)}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:510}
+    .hamburger span{display:block;width:22px;height:1.5px;background:var(--dark);transition:transform .3s,opacity .3s;transform-origin:center}
+    .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+    .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+    #mobile-nav{position:fixed;inset:0;background:var(--dark);z-index:490;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.25rem;opacity:0;pointer-events:none;transition:opacity .4s}
+    #mobile-nav.open{opacity:1;pointer-events:all}
+    #mobile-nav a{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.25rem,7vw,3.5rem);font-weight:700;color:rgba(255,255,255,.75);text-decoration:none;letter-spacing:-.04em;transition:color .2s}
+    #mobile-nav a:hover{color:var(--white)}
+    #mobile-nav .m-cta{background:var(--purple);color:var(--white)!important;font-size:1.2rem!important;padding:.85rem 2.5rem;border-radius:6px;margin-top:.5rem}
+    @media(max-width:767px){#navbar{padding:1.2rem 1.5rem}#navbar.scrolled{padding:.9rem 1.5rem}.nav-links{display:none}.hamburger{display:flex}}
+
+    /* hero */
+    .page-hero{padding:10rem 2.5rem 6rem;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
+    .page-hero-inner{position:relative;z-index:2;max-width:1200px}
+    .kicker{display:inline-flex;align-items:center;gap:.625rem;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-400);margin-bottom:1.375rem}
+    .kicker::before{content:'';display:block;width:18px;height:1px;background:currentColor}
+    .kicker.light{color:rgba(255,255,255,.35)}
+    .kicker.light::before{background:rgba(255,255,255,.35)}
+    .page-hero h1{font-size:clamp(3rem,8vw,8rem);letter-spacing:-.045em;line-height:.97;margin-bottom:1.5rem}
+    .page-hero-sub{font-size:clamp(.9rem,1.4vw,1.1rem);color:var(--grey-600);max-width:560px;line-height:1.6}
+    @media(max-width:767px){.page-hero{padding:7rem 1.5rem 4rem}}
+
+    /* buttons */
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.875rem 1.875rem;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:.9375rem;font-weight:600;text-decoration:none;transition:background .2s,transform .2s,border-color .2s,color .2s,box-shadow .2s;white-space:nowrap;cursor:pointer;border:none}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--purple);color:var(--white);border:1px solid transparent;box-shadow:0 2px 16px rgba(50,12,87,.18)}
+    .btn-primary:hover{background:var(--purple-mid);box-shadow:0 6px 28px rgba(50,12,87,.3)}
+    .btn-ghost{background:transparent;color:var(--dark);border:1px solid rgba(0,0,0,.14)}
+    .btn-ghost:hover{border-color:var(--purple);color:var(--purple)}
+    .btn-sand{background:var(--sand);color:var(--purple);border:1px solid transparent}
+    .btn-sand:hover{background:var(--white);box-shadow:0 4px 20px rgba(0,0,0,.12)}
+    .btn-outline-white{background:rgba(255,255,255,.08);color:var(--white);border:1px solid rgba(255,255,255,.18)}
+    .btn-outline-white:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35)}
+    .btn-lg{padding:1.05rem 2.25rem;font-size:1rem}
+
+    /* services page layout */
+    .service-block{padding:7rem 2.5rem;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1.4fr;gap:6rem;align-items:start}
+    .service-block.dark{background:var(--dark);border-color:rgba(255,255,255,.06)}
+    .service-block:last-of-type{border-bottom:none}
+
+    .sb-left{position:sticky;top:120px}
+    .sb-num{font-family:'Bricolage Grotesque',sans-serif;font-size:.75rem;font-weight:600;color:var(--grey-400);letter-spacing:.06em;margin-bottom:1.25rem}
+    .sb-name{font-size:clamp(1.75rem,3vw,2.75rem);letter-spacing:-.04em;line-height:1.08;margin-bottom:1.25rem}
+    .dark .sb-name{color:var(--white)}
+    .sb-badge{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .8rem;border-radius:20px;display:inline-block;margin-bottom:1.5rem}
+    .badge-roi{background:rgba(50,12,87,.1);color:var(--purple)}
+    .badge-roi-dark{background:rgba(50,12,87,.3);color:#c09af0}
+    .badge-new{background:#FFF3E0;color:#B45A00}
+    .badge-expert{background:#E8F5E9;color:#1B5E20}
+    .badge-expert-dark{background:rgba(27,94,32,.2);color:#81C784}
+    .sb-desc{font-size:1rem;color:var(--grey-600);line-height:1.7;margin-bottom:2rem}
+    .dark .sb-desc{color:rgba(255,255,255,.5)}
+
+    .sb-right{}
+    .process-title{font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-400);margin-bottom:1.75rem}
+    .dark .process-title{color:rgba(255,255,255,.3)}
+
+    .steps{display:flex;flex-direction:column;gap:0;margin-bottom:3rem}
+    .step{display:flex;gap:1.25rem;padding:1.5rem 0;border-bottom:1px solid var(--border)}
+    .dark .step{border-color:rgba(255,255,255,.06)}
+    .step:last-child{border-bottom:none;padding-bottom:0}
+    .step-num{font-family:'Bricolage Grotesque',sans-serif;font-size:.8rem;font-weight:700;color:var(--purple);width:2rem;flex-shrink:0;padding-top:.1rem}
+    .dark .step-num{color:#c09af0}
+    .step-content h4{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.35rem}
+    .dark .step-content h4{color:var(--white)}
+    .step-content p{font-size:.875rem;color:var(--grey-600);line-height:1.6}
+    .dark .step-content p{color:rgba(255,255,255,.45)}
+
+    .tools-grid{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem}
+    .tool-tag{font-size:.72rem;font-weight:600;padding:.35rem .8rem;border-radius:6px;background:var(--grey-100);color:var(--grey-600);border:1px solid var(--border)}
+    .dark .tool-tag{background:rgba(255,255,255,.06);color:rgba(255,255,255,.55);border-color:rgba(255,255,255,.1)}
+
+    .sb-cta{display:flex;gap:.875rem;flex-wrap:wrap}
+
+    @media(max-width:1023px){
+      .service-block{grid-template-columns:1fr;gap:3rem}
+      .sb-left{position:static}
+    }
+    @media(max-width:767px){
+      .service-block{padding:4.5rem 1.5rem}
+    }
+
+    /* comparison strip */
+    .compare-strip{padding:5rem 2.5rem;background:var(--grey-100);border-bottom:1px solid var(--border)}
+    .compare-inner{max-width:900px;margin:0 auto;text-align:center}
+    .compare-title{font-size:clamp(1.75rem,3vw,2.5rem);letter-spacing:-.035em;margin-bottom:3rem}
+    .compare-grid{display:grid;grid-template-columns:1fr 1px 1fr;gap:3rem;align-items:start}
+    .compare-divider{background:var(--border);height:100%}
+    .compare-col h3{font-size:1.1rem;font-weight:700;letter-spacing:-.02em;margin-bottom:1.25rem;color:var(--grey-800)}
+    .compare-col.good h3{color:var(--purple)}
+    .compare-list{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+    .compare-list li{font-size:.9rem;color:var(--grey-600);display:flex;align-items:flex-start;gap:.625rem}
+    .compare-list li i{margin-top:.15rem;flex-shrink:0}
+    .compare-col.bad .compare-list li i{color:#D32F2F}
+    .compare-col.good .compare-list li i{color:#2E7D32}
+    @media(max-width:767px){
+      .compare-strip{padding:4rem 1.5rem}
+      .compare-grid{grid-template-columns:1fr;gap:2rem}
+      .compare-divider{display:none}
+    }
+
+    /* final cta */
+    .final-cta{padding:9rem 2.5rem;background:var(--purple);text-align:center;color:var(--white)}
+    .final-cta h2{font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:-.045em;color:var(--white);margin-bottom:1rem;max-width:600px;margin-left:auto;margin-right:auto}
+    .final-cta p{font-size:.875rem;color:rgba(255,255,255,.45);margin-bottom:2.75rem}
+    .cta-btns{display:flex;gap:.875rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+    .cta-trust{display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;font-size:.78rem;color:rgba(255,255,255,.35)}
+    .cta-trust span{display:flex;align-items:center;gap:.4rem}
+    @media(max-width:767px){.final-cta{padding:6rem 1.5rem}}
+
+    /* footer */
+    footer{background:var(--dark);color:var(--white);padding:5rem 2.5rem 2rem}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:4rem;margin-bottom:4rem}
+    .footer-logo{font-family:'Bricolage Grotesque',sans-serif;font-size:1.75rem;font-weight:800;letter-spacing:-.05em;margin-bottom:.75rem}
+    .footer-logo em{font-style:normal;color:var(--purple)}
+    .footer-tagline{font-size:.875rem;color:rgba(255,255,255,.4);line-height:1.55;margin-bottom:1.5rem}
+    .footer-certif{font-size:.7rem;color:rgba(255,255,255,.2);line-height:1.9}
+    .footer-col-title{font-family:'Bricolage Grotesque',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:1.25rem}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+    .footer-links a{font-size:.875rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:var(--white)}
+    .footer-ci{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.875rem}
+    .footer-ci i{color:var(--purple);margin-top:.1rem;width:16px;flex-shrink:0}
+    .footer-ci span,.footer-ci a{font-size:.85rem;color:rgba(255,255,255,.5);text-decoration:none;line-height:1.5;transition:color .2s}
+    .footer-ci a:hover{color:var(--white)}
+    .footer-social{display:flex;gap:.65rem;margin-top:1.5rem}
+    .footer-social a{width:34px;height:34px;border-radius:8px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);font-size:.8rem;text-decoration:none;transition:border-color .2s,color .2s,background .2s}
+    .footer-social a:hover{border-color:var(--purple);color:var(--white);background:rgba(50,12,87,.35)}
+    .footer-bar{border-top:1px solid rgba(255,255,255,.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;gap:1.25rem;flex-wrap:wrap}
+    .footer-bar-left{font-size:.75rem;color:rgba(255,255,255,.2)}
+    .footer-bar-right{display:flex;gap:1.5rem}
+    .footer-bar-right a{font-size:.75rem;color:rgba(255,255,255,.2);text-decoration:none;transition:color .2s}
+    .footer-bar-right a:hover{color:rgba(255,255,255,.6)}
+    @media(max-width:1023px){.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:767px){footer{padding:4rem 1.5rem 2rem}.footer-grid{grid-template-columns:1fr;gap:2.5rem}.footer-bar{flex-direction:column;align-items:flex-start}}
+
+    .gsap-up{opacity:0;transform:translateY(40px)}
+    .gsap-left{opacity:0;transform:translateX(-40px)}
+    .gsap-right{opacity:0;transform:translateX(40px)}
+  </style>
+</head>
+<body>
+<div id="cd" aria-hidden="true"></div>
+<div id="cr" aria-hidden="true"></div>
+<div id="sp" aria-hidden="true"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navigation principale">
+  <a href="index.html" class="nav-logo">FAD<em>IZ</em></a>
+  <ul class="nav-links" role="list">
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="realisations.html">Réalisations</a></li>
+    <li><a href="a-propos.html">À propos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Audit Gratuit</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-nav" role="dialog" aria-modal="true">
+  <a href="services.html">Services</a>
+  <a href="realisations.html">Réalisations</a>
+  <a href="a-propos.html">À propos</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="m-cta">Audit Gratuit →</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero" aria-labelledby="hero-h1">
+  <div class="page-hero-inner">
+    <p class="kicker">6 pôles d'expertise</p>
+    <h1 id="hero-h1" class="gsap-up">Nos<br>services.</h1>
+    <p class="page-hero-sub gsap-up">
+      Pas de catalogue généraliste. Six domaines maîtrisés en profondeur,
+      articulés autour d'un seul objectif : construire des systèmes qui génèrent des revenus.
+    </p>
+  </div>
+</section>
+
+<!-- 01 — WEB -->
+<section class="service-block" id="web" aria-labelledby="svc-web">
+  <div class="sb-left gsap-left">
+    <div class="sb-num">01</div>
+    <h2 id="svc-web" class="sb-name">Ingénierie Web<br>&amp; E-commerce</h2>
+    <span class="sb-badge badge-roi">Garanti ROI</span>
+    <p class="sb-desc">
+      Un site n'est pas une brochure numérique. C'est le cœur de votre machine
+      de vente. Nous architections des expériences web orientées conversion —
+      rapides, sécurisées, scalables.
+    </p>
+    <div class="sb-cta">
+      <a href="contact.html" class="btn btn-primary">Démarrer un projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <div class="sb-right gsap-right">
+    <p class="process-title">Notre processus</p>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div class="step-content">
+          <h4>Audit &amp; Architecture</h4>
+          <p>Analyse de l'existant, définition de l'arborescence, wireframes et spécifications fonctionnelles avant toute ligne de code.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div class="step-content">
+          <h4>Design &amp; UX</h4>
+          <p>Prototype Figma validé avec vous. Chaque décision de design est justifiée par des données de conversion.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div class="step-content">
+          <h4>Développement &amp; Intégration</h4>
+          <p>Développement sur la stack adaptée à votre besoin. Performance Core Web Vitals, sécurité, accessibilité.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <div class="step-content">
+          <h4>Tracking &amp; Lancement</h4>
+          <p>GA4, Meta Pixel, GTM configurés avant le lancement. Vous avez les accès complets. Zéro dépendance à l'agence.</p>
+        </div>
+      </div>
+    </div>
+    <p class="process-title">Stack technologique</p>
+    <div class="tools-grid">
+      <span class="tool-tag">WordPress</span>
+      <span class="tool-tag">WooCommerce</span>
+      <span class="tool-tag">Shopify</span>
+      <span class="tool-tag">Lovable</span>
+      <span class="tool-tag">Elementor Pro</span>
+      <span class="tool-tag">Figma</span>
+      <span class="tool-tag">Google Analytics 4</span>
+      <span class="tool-tag">GTM</span>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — ERP (dark) -->
+<section class="service-block dark" id="erp" aria-labelledby="svc-erp">
+  <div class="sb-left gsap-left">
+    <div class="sb-num" style="color:rgba(255,255,255,.3)">02</div>
+    <h2 id="svc-erp" class="sb-name">ERP &amp; CRM<br>Sur Mesure</h2>
+    <span class="sb-badge badge-expert-dark">Expert</span>
+    <p class="sb-desc">
+      Vos processus métier méritent mieux que des feuilles Excel. Nous déployons
+      et personnalisons les ERP et CRM les plus puissants du marché — adaptés
+      à votre secteur, vos équipes, votre langue.
+    </p>
+    <div class="sb-cta">
+      <a href="contact.html" class="btn btn-sand">Demander un audit <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <div class="sb-right gsap-right">
+    <p class="process-title">Notre processus</p>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div class="step-content">
+          <h4>Cartographie des processus</h4>
+          <p>Atelier de 2–3h avec vos équipes pour cartographier chaque flux opérationnel : vente, achat, stock, RH, comptabilité.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div class="step-content">
+          <h4>Paramétrage &amp; Customisation</h4>
+          <p>Configuration sur mesure d'Odoo ou HubSpot selon vos modules, vos utilisateurs, vos workflows.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div class="step-content">
+          <h4>Migration des données</h4>
+          <p>Import propre de vos données historiques (clients, produits, commandes) avec validation avant activation.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <div class="step-content">
+          <h4>Formation &amp; Support</h4>
+          <p>Formation de vos équipes, documentation interne, support 30 jours post-lancement inclus.</p>
+        </div>
+      </div>
+    </div>
+    <p class="process-title">Stack technologique</p>
+    <div class="tools-grid">
+      <span class="tool-tag">Odoo 17</span>
+      <span class="tool-tag">HubSpot CRM</span>
+      <span class="tool-tag">Supabase</span>
+      <span class="tool-tag">PostgreSQL</span>
+      <span class="tool-tag">REST API</span>
+      <span class="tool-tag">Zapier</span>
+      <span class="tool-tag">Make (Integromat)</span>
+    </div>
+  </div>
+</section>
+
+<!-- 03 — ACQUISITION -->
+<section class="service-block" id="acquisition" aria-labelledby="svc-acq">
+  <div class="sb-left gsap-left">
+    <div class="sb-num">03</div>
+    <h2 id="svc-acq" class="sb-name">Acquisition B2B<br>Payante</h2>
+    <span class="sb-badge badge-roi">Garanti ROI</span>
+    <p class="sb-desc">
+      Chaque centime publicitaire est une décision d'investissement.
+      Nous gérons vos campagnes avec la rigueur d'un desk trading :
+      test, mesure, itération, scale.
+    </p>
+    <div class="sb-cta">
+      <a href="contact.html" class="btn btn-primary">Lancer une campagne <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <div class="sb-right gsap-right">
+    <p class="process-title">Notre processus</p>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div class="step-content">
+          <h4>Audit &amp; Benchmark</h4>
+          <p>Analyse de votre marché, audience cible, concurrents, mots-clés, CPL benchmark sectoriel.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div class="step-content">
+          <h4>Stratégie &amp; Créatifs</h4>
+          <p>Plan media détaillé, production des créatifs (visuels, copy, vidéo courte), A/B test plan.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div class="step-content">
+          <h4>Activation &amp; Tracking</h4>
+          <p>Lancement sur les canaux validés, tracking conversions complet, tableau de bord en temps réel partagé.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <div class="step-content">
+          <h4>Optimisation continue</h4>
+          <p>Revue hebdomadaire, scaling des gagnants, kill des perdants, reporting mensuel avec recommandations.</p>
+        </div>
+      </div>
+    </div>
+    <p class="process-title">Canaux maîtrisés</p>
+    <div class="tools-grid">
+      <span class="tool-tag">Meta Ads</span>
+      <span class="tool-tag">Google Ads</span>
+      <span class="tool-tag">TikTok Ads</span>
+      <span class="tool-tag">LinkedIn Ads</span>
+      <span class="tool-tag">LinkedIn Outreach</span>
+      <span class="tool-tag">YouTube Ads</span>
+      <span class="tool-tag">Retargeting</span>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — SEO/GEO (dark) -->
+<section class="service-block dark" id="seo" aria-labelledby="svc-seo">
+  <div class="sb-left gsap-left">
+    <div class="sb-num" style="color:rgba(255,255,255,.3)">04</div>
+    <h2 id="svc-seo" class="sb-name">SEO &amp; GEO</h2>
+    <span class="sb-badge badge-new" style="background:#2d1a00;color:#f5a623">Nouveau</span>
+    <p class="sb-desc">
+      Le référencement naturel reste indispensable. Mais l'IA générative change
+      les règles : être visible sur Google ne suffit plus. Nous optimisons pour
+      les deux mondes — Search classique et moteurs IA.
+    </p>
+    <div class="sb-cta">
+      <a href="contact.html" class="btn btn-sand">Audit SEO gratuit <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <div class="sb-right gsap-right">
+    <p class="process-title">Notre approche</p>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div class="step-content">
+          <h4>Audit technique complet</h4>
+          <p>Crawl, Core Web Vitals, structure, maillage interne, backlinks toxiques, canoniques, schema markup.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div class="step-content">
+          <h4>Stratégie éditoriale</h4>
+          <p>Recherche sémantique, clustering thématique, calendrier éditorial aligné sur l'intention de recherche.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div class="step-content">
+          <h4>GEO — Optimisation IA</h4>
+          <p>Structuration du contenu pour être cité par ChatGPT, Perplexity, Gemini. E-E-A-T, schémas structurés, FAQ.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <div class="step-content">
+          <h4>Link building &amp; autorité</h4>
+          <p>Acquisition de backlinks qualitatifs sur des domaines sectoriels. Pas de fermes de liens.</p>
+        </div>
+      </div>
+    </div>
+    <p class="process-title">Outils &amp; stack</p>
+    <div class="tools-grid">
+      <span class="tool-tag">Ahrefs</span>
+      <span class="tool-tag">Semrush</span>
+      <span class="tool-tag">Screaming Frog</span>
+      <span class="tool-tag">Google Search Console</span>
+      <span class="tool-tag">Schema.org</span>
+      <span class="tool-tag">Rank Math</span>
+    </div>
+  </div>
+</section>
+
+<!-- 05 — BRANDING -->
+<section class="service-block" id="branding" aria-labelledby="svc-brand">
+  <div class="sb-left gsap-left">
+    <div class="sb-num">05</div>
+    <h2 id="svc-brand" class="sb-name">Branding &amp;<br>Identité Digitale</h2>
+    <span class="sb-badge badge-expert">Expert</span>
+    <p class="sb-desc">
+      Votre marque est la première impression que vous laissez.
+      Nous créons des identités distinctes, mémorables, capables de rivaliser
+      avec les leaders de votre marché dès le premier regard.
+    </p>
+    <div class="sb-cta">
+      <a href="contact.html" class="btn btn-primary">Démarrer mon branding <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <div class="sb-right gsap-right">
+    <p class="process-title">Ce que nous livrons</p>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div class="step-content">
+          <h4>Naming &amp; positionnement</h4>
+          <p>Définition du positionnement stratégique, territory de marque, naming si besoin, vérification disponibilité.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div class="step-content">
+          <h4>Identité visuelle</h4>
+          <p>Logo (3 propositions), palette couleurs, typographie, iconographie. Livré en formats PDF, SVG, PNG, Figma.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div class="step-content">
+          <h4>Charte graphique</h4>
+          <p>Guide de 30+ pages couvrant tous les cas d'usage : digital, print, réseaux sociaux, signalétique.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <div class="step-content">
+          <h4>Supports commerciaux</h4>
+          <p>Présentation commerciale, carte de visite, signature email, templates réseaux sociaux, devis/facture.</p>
+        </div>
+      </div>
+    </div>
+    <p class="process-title">Outils de design</p>
+    <div class="tools-grid">
+      <span class="tool-tag">Figma</span>
+      <span class="tool-tag">Adobe Illustrator</span>
+      <span class="tool-tag">Adobe Photoshop</span>
+      <span class="tool-tag">Canva Pro</span>
+      <span class="tool-tag">Notion (charte)</span>
+    </div>
+  </div>
+</section>
+
+<!-- 06 — CONSULTING (dark) -->
+<section class="service-block dark" id="consulting" aria-labelledby="svc-consult">
+  <div class="sb-left gsap-left">
+    <div class="sb-num" style="color:rgba(255,255,255,.3)">06</div>
+    <h2 id="svc-consult" class="sb-name">Consulting &amp;<br>Stratégie Digitale</h2>
+    <span class="sb-badge badge-roi-dark">Garanti ROI</span>
+    <p class="sb-desc">
+      Parfois vous n'avez pas besoin d'une agence qui exécute.
+      Vous avez besoin d'un partenaire qui pense. Nous intervenons en tant que
+      DSI ou CDO externalisé — avec l'autorité et la rigueur d'un senior consultant.
+    </p>
+    <div class="sb-cta">
+      <a href="contact.html" class="btn btn-sand">Réserver une session <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <div class="sb-right gsap-right">
+    <p class="process-title">Nos offres consulting</p>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">A</span>
+        <div class="step-content">
+          <h4>Audit digital (one-shot)</h4>
+          <p>3 jours d'analyse approfondie de votre présence digitale, de votre stack technologique et de vos dépenses marketing. Livrable : rapport 40+ pages + roadmap prioritisée.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">B</span>
+        <div class="step-content">
+          <h4>Retainer mensuel</h4>
+          <p>8h/mois de conseil stratégique, revue des KPI, recommandations d'optimisation, veille secteur. Votre CGO externalisé.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">C</span>
+        <div class="step-content">
+          <h4>Transformation digitale</h4>
+          <p>Accompagnement sur 3–12 mois pour digitaliser une entreprise traditionnelle : processus, outils, équipes, culture.</p>
+        </div>
+      </div>
+    </div>
+    <p class="process-title">Domaines couverts</p>
+    <div class="tools-grid">
+      <span class="tool-tag">Stratégie digitale</span>
+      <span class="tool-tag">Audit ROI</span>
+      <span class="tool-tag">Roadmap tech</span>
+      <span class="tool-tag">Formation équipes</span>
+      <span class="tool-tag">KPI Framework</span>
+      <span class="tool-tag">Due diligence</span>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE STRIP -->
+<div class="compare-strip">
+  <div class="compare-inner">
+    <h2 class="compare-title gsap-up">FADIZ vs l'agence classique.</h2>
+    <div class="compare-grid">
+      <div class="compare-col bad">
+        <h3>L'agence classique</h3>
+        <ul class="compare-list">
+          <li><i class="fa-solid fa-xmark" aria-hidden="true"></i> Vous ne possédez pas le code</li>
+          <li><i class="fa-solid fa-xmark" aria-hidden="true"></i> Reporting opaque ou mensuel tardif</li>
+          <li><i class="fa-solid fa-xmark" aria-hidden="true"></i> Résultats non contractuels</li>
+          <li><i class="fa-solid fa-xmark" aria-hidden="true"></i> 3 mois pour livrer un site</li>
+          <li><i class="fa-solid fa-xmark" aria-hidden="true"></i> Account manager généraliste</li>
+        </ul>
+      </div>
+      <div class="compare-divider"></div>
+      <div class="compare-col good">
+        <h3>FADIZ Agency</h3>
+        <ul class="compare-list">
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> 100% ownership — code, data, accès</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Dashboard temps réel partagé</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> KPI contractuels, garantis</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Site livré en 1–3 semaines</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Expert dédié par domaine</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<section class="final-cta" aria-labelledby="cta-h2">
+  <h2 id="cta-h2" class="gsap-up">Quel service<br>vous correspond ?</h2>
+  <p>Dites-nous votre défi. Nous construisons la solution.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn btn-sand btn-lg" aria-label="Demander un audit gratuit">
+      <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+      Audit gratuit — 0€
+    </a>
+    <a href="https://wa.me/212663893696?text=Bonjour%20FADIZ%2C%20je%20souhaite%20discuter%20d%27un%20service."
+       class="btn btn-outline-white btn-lg"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="WhatsApp FADIZ Agency">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      WhatsApp direct
+    </a>
+  </div>
+  <div class="cta-trust">
+    <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Réponse sous 24h</span>
+    <span><i class="fa-solid fa-gift" aria-hidden="true"></i> Audit offert</span>
+    <span><i class="fa-solid fa-handshake" aria-hidden="true"></i> Sans engagement</span>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">FAD<em>IZ</em></div>
+      <p class="footer-tagline">We Build Systems That Sell.<br>Architectures digitales B2B — Web, ERP, Acquisition, SEO/GEO.</p>
+      <div class="footer-certif"><div>FDZ INTERNATIONAL SARL AU</div><div>Kénitra, Maroc</div><div>© 2025 Tous droits réservés</div></div>
+      <div class="footer-social" aria-label="Réseaux sociaux">
+        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://wa.me/212663893696" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title">Services</p>
+      <ul class="footer-links">
+        <li><a href="#web">Ingénierie Web</a></li>
+        <li><a href="#erp">ERP &amp; CRM</a></li>
+        <li><a href="#acquisition">Acquisition B2B</a></li>
+        <li><a href="#seo">SEO &amp; GEO</a></li>
+        <li><a href="#branding">Branding</a></li>
+        <li><a href="#consulting">Consulting</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Pages</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Contact</p>
+      <div class="footer-ci"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Kénitra, Maroc</span></div>
+      <div class="footer-ci"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/212663893696" target="_blank" rel="noopener noreferrer">+212 663 893 696</a></div>
+      <div class="footer-ci"><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:contact@fadizagency.com">contact@fadizagency.com</a></div>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <p class="footer-bar-left">© 2025 FDZ INTERNATIONAL SARL AU · Kénitra, Maroc</p>
+    <nav class="footer-bar-right" aria-label="Liens légaux">
+      <a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">CGV</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+(function(){
+  const dot=document.getElementById('cd'),ring=document.getElementById('cr');
+  if(dot&&ring&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});
+    (function raf(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(raf)})();
+    document.querySelectorAll('a,button').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{dot.classList.add('h');ring.classList.add('h')});
+      el.addEventListener('mouseleave',()=>{dot.classList.remove('h');ring.classList.remove('h')});
+    });
+  }
+  const sp=document.getElementById('sp');
+  window.addEventListener('scroll',()=>{
+    document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+    if(sp)sp.style.transform='scaleX('+(window.scrollY/(document.body.scrollHeight-window.innerHeight))+')';
+  },{passive:true});
+  const burger=document.getElementById('hamburger'),mnav=document.getElementById('mobile-nav');
+  burger.addEventListener('click',()=>{
+    const open=mnav.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open);
+    document.body.style.overflow=open?'hidden':'';
+  });
+  mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    mnav.classList.remove('open');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';
+  }));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){mnav.classList.remove('open');burger.setAttribute('aria-expanded','false');document.body.style.overflow=''}});
+  const def={duration:.85,ease:'power3.out'};
+  gsap.utils.toArray('.gsap-up').forEach((el,i)=>gsap.fromTo(el,{opacity:0,y:42},{...def,opacity:1,y:0,delay:(i%3)*.08,scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
+  gsap.utils.toArray('.gsap-left').forEach(el=>gsap.fromTo(el,{opacity:0,x:-42},{...def,duration:.95,opacity:1,x:0,scrollTrigger:{trigger:el,start:'top 82%',once:true}}));
+  gsap.utils.toArray('.gsap-right').forEach(el=>gsap.fromTo(el,{opacity:0,x:42},{...def,duration:.95,opacity:1,x:0,scrollTrigger:{trigger:el,start:'top 82%',once:true}}));
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})}));
+})();
+</script>
+</body>
+</html>
