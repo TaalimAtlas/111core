@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À Propos — FADIZ Agency | Agence Digitale Kénitra</title>
+  <meta name="description" content="Découvrez FADIZ Agency — notre histoire, nos valeurs et notre vision. Agence B2B fondée en 2022 à Kénitra, Maroc.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fadiz.agency/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fadiz.agency/about.html">
+  <meta property="og:title" content="À Propos — FADIZ Agency | Agence Digitale Kénitra">
+  <meta property="og:description" content="Découvrez FADIZ Agency — notre histoire, nos valeurs et notre vision. Agence B2B fondée en 2022 à Kénitra, Maroc.">
+  <meta property="og:image" content="https://fadiz.agency/assets/og-about.jpg">
+  <meta property="og:locale" content="fr_MA">
+  <meta property="og:site_name" content="FADIZ Agency">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="À Propos — FADIZ Agency | Agence Digitale Kénitra">
+  <meta name="twitter:description" content="Découvrez FADIZ Agency — notre histoire, nos valeurs et notre vision. Agence B2B fondée en 2022 à Kénitra, Maroc.">
+  <meta name="twitter:image" content="https://fadiz.agency/assets/og-about.jpg">
+
+  <!-- Google Fonts: Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- LocalBusiness JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FADIZ Agency",
+    "description": "Agence digitale B2B fondée en 2022 à Kénitra, Maroc. Création web, publicité digitale, GEO/SEO, ERP.",
+    "url": "https://fadiz.agency",
+    "logo": "https://fadiz.agency/assets/logo.png",
+    "image": "https://fadiz.agency/assets/og-about.jpg",
+    "foundingDate": "2022",
+    "telephone": "+212663893696",
+    "email": "contact@fadiz.agency",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "31 Rue Martir Abdeslam Ben Mohammed, Bureau N°2, Val Fleury",
+      "addressLocality": "Kénitra",
+      "postalCode": "14000",
+      "addressCountry": "MA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.26,
+      "longitude": -6.58
+    },
+    "numberOfEmployees": {"@type": "QuantitativeValue", "value": 8},
+    "areaServed": ["MA","FR","BE","AE","SA"],
+    "sameAs": [
+      "https://www.linkedin.com/company/fadiz-agency",
+      "https://www.instagram.com/fadiz.agency"
+    ]
+  }
+  </script>
+
+  <style>
+    /* About page specific styles */
+    .stat-counter-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+    .stat-counter-item{background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center}
+    .stat-counter-number{font-size:2.8rem;font-weight:800;color:var(--violet);line-height:1;display:block;margin-bottom:.4rem}
+    .stat-counter-label{font-size:.88rem;color:var(--muted);font-weight:500}
+    .timeline{position:relative;padding-left:2rem}
+    .timeline::before{content:'';position:absolute;left:0;top:.5rem;bottom:.5rem;width:2px;background:linear-gradient(to bottom,var(--violet),var(--blue))}
+    .timeline-item{position:relative;padding-bottom:2.5rem}
+    .timeline-item:last-child{padding-bottom:0}
+    .timeline-dot{position:absolute;left:-2.4rem;top:.25rem;width:14px;height:14px;border-radius:50%;background:var(--violet);border:3px solid #fff;box-shadow:0 0 0 2px var(--violet)}
+    .timeline-year{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--violet);background:#ede9fe;padding:.2rem .65rem;border-radius:20px;margin-bottom:.5rem}
+    .timeline-title{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:.35rem}
+    .timeline-desc{font-size:.9rem;color:var(--muted);line-height:1.65}
+    .values-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+    .card-dark{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.75rem;transition:background .2s}
+    .card-dark:hover{background:rgba(255,255,255,.1)}
+    .card-dark-icon{width:44px;height:44px;border-radius:10px;background:rgba(167,139,250,.15);display:flex;align-items:center;justify-content:center;color:#a78bfa;font-size:1.1rem;margin-bottom:1.25rem}
+    .card-dark-title{font-size:1rem;font-weight:700;color:#fff;margin-bottom:.5rem}
+    .card-dark-text{font-size:.9rem;color:rgba(255,255,255,.55);line-height:1.65}
+    .badge-blue{background:#dbeafe;color:var(--blue);font-size:.8rem;font-weight:600;padding:.3rem .85rem;border-radius:20px;display:inline-block;margin:.3rem}
+    .badge-violet{background:#ede9fe;color:var(--violet);font-size:.8rem;font-weight:600;padding:.3rem .85rem;border-radius:20px;display:inline-block;margin:.3rem}
+    .badge-green{background:#dcfce7;color:#16a34a;font-size:.8rem;font-weight:600;padding:.3rem .85rem;border-radius:20px;display:inline-block;margin:.3rem}
+    .badge-dark{background:#f1f5f9;color:var(--ink);font-size:.8rem;font-weight:600;padding:.3rem .85rem;border-radius:20px;display:inline-block;margin:.3rem}
+    @media(max-width:768px){
+      .stat-counter-grid{grid-template-columns:repeat(2,1fr)}
+      .values-grid-2{grid-template-columns:1fr}
+    }
+    @media(max-width:480px){.stat-counter-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/212663893696?text=Salam%2C+je+voudrais+un+audit+gratuit+de+mon+site." class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <button class="float-devis" data-modal-open aria-label="Devis rapide"><i class="fa-solid fa-bolt"></i> Devis rapide</button>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" data-modal-close>&times;</button>
+      <p class="section-label">Offre limitée</p>
+      <h2 id="modal-title">Audit Digital Gratuit</h2>
+      <p style="color:var(--muted);margin-bottom:1.5rem">Analyse complète sous 24h — sans engagement.</p>
+      <form>
+        <div class="form-row">
+          <div class="form-group"><label>Prénom *</label><input type="text" name="prenom" required placeholder="Votre prénom"></div>
+          <div class="form-group"><label>Entreprise *</label><input type="text" name="entreprise" required placeholder="Nom de votre société"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="votre@email.com"></div>
+          <div class="form-group"><label>WhatsApp</label><input type="tel" name="whatsapp" placeholder="+212 6XX XXX XXX"></div>
+        </div>
+        <div class="form-group"><label>Besoin principal *</label>
+          <select name="besoin" required><option value="">— Choisir —</option><option>Site web</option><option>Google Ads</option><option>GEO/SEO</option><option>ERP</option><option>Conseil</option></select>
+        </div>
+        <button type="submit" class="btn-primary btn-full">Demander mon audit <i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo"><span style="font-weight:800;font-size:1.4rem;color:#fff;letter-spacing:-.02em">FADIZ<span style="color:#a78bfa">.</span></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="geo-seo.html">GEO/SEO</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html" class="active">À propos</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="https://wa.me/212663893696" class="nav-wa" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+        <button class="btn-primary btn-sm" data-modal-open>Audit gratuit</button>
+      </div>
+      <button class="hamburger" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer">
+    <div id="drawer-overlay"></div>
+    <div class="drawer-panel">
+      <button class="drawer-close" id="drawer-close">&times;</button>
+      <a href="index.html" class="drawer-logo"><span style="font-weight:800;font-size:1.5rem">FADIZ<span style="color:#a78bfa">.</span></span></a>
+      <ul>
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+        <li><a href="services.html"><i class="fa-solid fa-layer-group"></i> Services</a></li>
+        <li><a href="geo-seo.html"><i class="fa-solid fa-map-location-dot"></i> GEO/SEO</a></li>
+        <li><a href="portfolio.html"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-users"></i> À propos</a></li>
+        <li><a href="faq.html"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div style="padding:1.5rem">
+        <button class="btn-primary btn-full" data-modal-open>Audit gratuit</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- Hero Mini -->
+    <section style="background:var(--hero-bg);padding:8rem 0 4rem;text-align:center">
+      <div class="container">
+        <p class="section-label">À Propos de FADIZ</p>
+        <h1 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:#fff;margin:.75rem 0 1rem;line-height:1.15">L'Agence Derrière les Résultats</h1>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section style="padding:5rem 0;background:#f8fafc">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+
+          <!-- Left: Mission Text -->
+          <div>
+            <p class="section-label">Notre mission</p>
+            <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:var(--ink);margin:.6rem 0 1.25rem;line-height:1.2">Notre Mission : Digitaliser les PME Ambitieuses</h2>
+            <p style="font-size:1rem;color:var(--muted);line-height:1.8">FADIZ Agency est née d'un constat simple : trop d'entreprises marocaines investissent dans le digital sans obtenir de résultats mesurables. Notre mission est de changer ça. Nous combinons expertise technique, créativité et data pour transformer votre présence en ligne en véritable moteur de croissance.</p>
+          </div>
+
+          <!-- Right: Stats -->
+          <div class="stat-counter-grid">
+            <div class="stat-counter-item">
+              <span class="stat-counter-number" data-counter="120" data-suffix="+">120+</span>
+              <span class="stat-counter-label">Projets livrés</span>
+            </div>
+            <div class="stat-counter-item">
+              <span class="stat-counter-number" data-counter="98" data-suffix="%">98%</span>
+              <span class="stat-counter-label">Clients satisfaits</span>
+            </div>
+            <div class="stat-counter-item">
+              <span class="stat-counter-number" data-counter="3" data-suffix=" ans">3 ans</span>
+              <span class="stat-counter-label">D'expérience</span>
+            </div>
+            <div class="stat-counter-item">
+              <span class="stat-counter-number" data-counter="7">7</span>
+              <span class="stat-counter-label">Pays servis</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="histoire" style="padding:5rem 0;background:#fff">
+      <div class="container" style="max-width:820px">
+        <p class="section-label" style="text-align:center">Depuis 2022</p>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:var(--ink);text-align:center;margin:.6rem 0 3rem">Notre Histoire</h2>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2022</span>
+            <p class="timeline-title">Fondation de FADIZ</p>
+            <p class="timeline-desc">Création à Kénitra avec une vision claire : apporter une expertise digitale de niveau international aux PME marocaines.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2023</span>
+            <p class="timeline-title">Expansion des Services</p>
+            <p class="timeline-desc">Lancement des offres Google Ads et GEO/SEO. Premiers clients internationaux en France et en Belgique.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2024</span>
+            <p class="timeline-title">Pôle ERP &amp; CRM</p>
+            <p class="timeline-desc">Déploiement des premières solutions Odoo pour PME. Équipe étendue à 8 collaborateurs spécialisés.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2026</span>
+            <p class="timeline-title">Leadership Régional</p>
+            <p class="timeline-desc">120+ projets livrés. Présence sur 5 marchés. Reconnaissance Best Agency Morocco 2025.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Valeurs Section -->
+    <section style="padding:5rem 0;background:var(--violet)">
+      <div class="container">
+        <p class="section-label" style="text-align:center;color:rgba(255,255,255,.5)">Ce qui nous guide</p>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:#fff;text-align:center;margin:.6rem 0 2.5rem">Nos Valeurs</h2>
+
+        <div class="values-grid-2">
+
+          <div class="card-dark">
+            <div class="card-dark-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <p class="card-dark-title">Résultats d'Abord</p>
+            <p class="card-dark-text">Chaque décision est guidée par les données et l'impact mesurable. Pas de promesses vagues.</p>
+          </div>
+
+          <div class="card-dark">
+            <div class="card-dark-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <p class="card-dark-title">Transparence Totale</p>
+            <p class="card-dark-text">Contrats clairs, reporting mensuel, pas de frais cachés. Vous savez toujours où va votre investissement.</p>
+          </div>
+
+          <div class="card-dark">
+            <div class="card-dark-icon"><i class="fa-solid fa-rocket"></i></div>
+            <p class="card-dark-title">Agilité</p>
+            <p class="card-dark-text">Nous livrons vite et nous adaptons. Sprints de 2 semaines, pas de projets-tunnels.</p>
+          </div>
+
+          <div class="card-dark">
+            <div class="card-dark-icon"><i class="fa-solid fa-heart"></i></div>
+            <p class="card-dark-title">Passion Client</p>
+            <p class="card-dark-text">Votre succès est notre succès. Nous sommes disponibles sur WhatsApp, pas dans une file d'attente.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Mot du Fondateur -->
+    <section style="padding:5rem 0;background:#fff">
+      <div class="container" style="max-width:860px;text-align:center">
+        <p class="section-label" style="text-align:center">La vision</p>
+        <h2 style="font-size:1.5rem;font-weight:800;color:var(--ink);margin:.6rem 0 2.5rem">Mot du Fondateur</h2>
+
+        <blockquote style="font-size:1.25rem;font-style:italic;line-height:1.7;color:var(--ink);border-left:4px solid var(--violet);padding-left:2rem;max-width:750px;margin:0 auto;text-align:left">
+          "J'ai créé FADIZ avec la conviction que les PME méritent les mêmes outils digitaux que les grandes entreprises — sans les budgets d'agences parisiennes. Chaque projet que nous livrons est une preuve que l'excellence digitale est accessible."
+        </blockquote>
+
+        <p style="margin-top:1.5rem;font-size:.9rem;font-weight:600;color:var(--muted)">Fadil Z. — Fondateur &amp; CEO, FADIZ Agency</p>
+      </div>
+    </section>
+
+    <!-- Certifications & Partenaires -->
+    <section style="padding:4rem 0;background:#f8fafc">
+      <div class="container" style="text-align:center">
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:1.5rem">Nos Certifications &amp; Outils</h3>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem">
+          <span class="badge-blue">Google Partner</span>
+          <span class="badge-violet">Meta Business Partner</span>
+          <span class="badge-green">Odoo Partner</span>
+          <span class="badge-blue">Google Analytics Certified</span>
+          <span class="badge-dark">SEMrush Certified</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding:5rem 0;background:var(--blue);text-align:center">
+      <div class="container">
+        <p class="section-label" style="color:rgba(255,255,255,.5);text-align:center">Rejoignez-nous</p>
+        <h2 style="font-size:clamp(1.7rem,3.5vw,2.6rem);font-weight:800;color:#fff;margin:.6rem 0 1.5rem">Rejoignez Nos 120+ Clients Satisfaits</h2>
+        <p style="color:rgba(255,255,255,.6);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">Audit digital gratuit, réponse sous 24h, sans engagement.</p>
+        <button class="btn-primary" data-modal-open style="background:#a78bfa;color:#fff;border:none;padding:1rem 2rem;font-size:1rem;font-weight:700;border-radius:8px;cursor:pointer">
+          Démarrer mon projet <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" style="display:inline-block;margin-bottom:1rem"><span style="font-weight:800;font-size:1.4rem;color:#fff">FADIZ<span style="color:#a78bfa">.</span></span></a>
+        <p>Agence digitale B2B — Kénitra, Maroc. Création web, publicité digitale, GEO/SEO, ERP.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/212663893696" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="service-web.html">Sites web</a></li>
+        <li><a href="service-ads.html">Google Ads</a></li>
+        <li><a href="geo-seo.html">GEO / SEO</a></li>
+        <li><a href="service-erp.html">ERP &amp; CRM</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Agence</h4><ul>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><i class="fa-solid fa-location-dot"></i> 31 Rue Martir Abdeslam, Bureau N°2, Val Fleury, Kénitra 14000</li>
+        <li><a href="tel:+212663893696"><i class="fa-solid fa-phone"></i> +212 663 893 696</a></li>
+        <li><a href="mailto:contact@fadiz.agency"><i class="fa-solid fa-envelope"></i> contact@fadiz.agency</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FADIZ Agency — FDZ INTERNATIONAL SARL AU. Tous droits réservés.</p>
+      <div><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Création de Sites Web — FADIZ Agency | Kénitra</title>
+  <meta name="description" content="Sites web professionnels B2B : vitrine, e-commerce, landing page. Livraison en 2 semaines, optimisé SEO & mobile. À partir de 4 900 MAD.">
+  <meta property="og:title" content="Création de Sites Web — FADIZ Agency | Kénitra">
+  <meta property="og:description" content="Sites web professionnels B2B : vitrine, e-commerce, landing page. Livraison en 2 semaines, optimisé SEO & mobile. À partir de 4 900 MAD.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fadiz.agency/service-web.html">
+  <meta property="og:image" content="https://fadiz.agency/og-image.jpg">
+  <link rel="canonical" href="https://fadiz.agency/service-web.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FADIZ Agency",
+    "description": "Agence digitale B2B — création de sites web, Google Ads, SEO, ERP. Kénitra, Maroc.",
+    "url": "https://fadiz.agency",
+    "telephone": "+212663893696",
+    "email": "contact@fadiz.agency",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "31 Rue Martir Abdeslam, Bureau N°2, Val Fleury",
+      "addressLocality": "Kénitra",
+      "postalCode": "14000",
+      "addressCountry": "MA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.261,
+      "longitude": -6.5802
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "priceRange": "MAD",
+    "serviceType": "Création de sites web professionnels",
+    "areaServed": "Maroc"
+  }
+  </script>
+</head>
+<body>
+
+<!-- FLOATS -->
+<a href="https://wa.me/212663893696?text=Salam%2C+je+voudrais+un+devis." class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<button class="float-devis" data-modal-open><i class="fa-solid fa-bolt"></i> Devis rapide</button>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="modal-close" data-modal-close>&times;</button>
+    <p class="section-label">Offre limitée</p>
+    <h2 id="modal-title">Audit Digital Gratuit</h2>
+    <p style="color:var(--muted);margin-bottom:1.5rem">Analyse complète sous 24h — sans engagement.</p>
+    <form>
+      <div class="form-row">
+        <div class="form-group"><label>Prénom *</label><input type="text" name="prenom" required placeholder="Votre prénom"></div>
+        <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="votre@email.com"></div>
+      </div>
+      <div class="form-group"><label>Besoin *</label><select name="besoin" required><option value="">— Choisir —</option><option>Site web</option><option>Google Ads</option><option>GEO/SEO</option><option>ERP</option><option>Conseil</option></select></div>
+      <button type="submit" class="btn-primary btn-full">Demander mon audit <i class="fa-solid fa-arrow-right"></i></button>
+    </form>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="header">
+  <nav class="nav-inner">
+    <a href="index.html" class="nav-logo"><span style="font-weight:800;font-size:1.4rem;color:#fff;letter-spacing:-.02em">FADIZ<span style="color:#a78bfa">.</span></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="geo-seo.html">GEO/SEO</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://wa.me/212663893696" class="nav-wa" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+      <button class="btn-primary btn-sm" data-modal-open>Audit gratuit</button>
+    </div>
+    <button class="hamburger" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div id="mobile-drawer">
+  <div id="drawer-overlay"></div>
+  <div class="drawer-panel">
+    <button class="drawer-close" id="drawer-close">&times;</button>
+    <a href="index.html" class="drawer-logo"><span style="font-weight:800;font-size:1.5rem">FADIZ<span style="color:#a78bfa">.</span></span></a>
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+      <li><a href="services.html"><i class="fa-solid fa-layer-group"></i> Services</a></li>
+      <li><a href="geo-seo.html"><i class="fa-solid fa-map-location-dot"></i> GEO/SEO</a></li>
+      <li><a href="portfolio.html"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-users"></i> À propos</a></li>
+      <li><a href="faq.html"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+    </ul>
+    <div style="padding:1.5rem"><button class="btn-primary btn-full" data-modal-open>Audit gratuit</button></div>
+  </div>
+</div>
+
+<main>
+
+  <!-- 1. HERO MINI -->
+  <section class="hero-mini" style="background:var(--hero-bg)">
+    <div class="container">
+      <p class="section-label">Service Web</p>
+      <h1 class="hero-title">Des Sites Web Qui Convertissent</h1>
+      <p class="hero-subtitle">Vitrine, e-commerce, SaaS — nous créons votre présence digitale premium. Score Google 90+. Livraison 2 semaines.</p>
+      <div class="hero-ctas">
+        <button data-modal-open class="btn-primary btn-lg">Devis gratuit →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. AVANTAGES -->
+  <section class="section section--light">
+    <div class="container">
+      <h2 class="section-title">Pourquoi Choisir FADIZ pour Votre Site ?</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>100% Responsive</h3>
+          <p>Mobile-first design, testé sur 20+ appareils.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>Performance 90+</h3>
+          <p>Google PageSpeed 90+ garanti. Core Web Vitals optimisés.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-search"></i></div>
+          <h3>SEO Intégré</h3>
+          <p>Structure technique, balises, vitesse — SEO inclus dès la conception.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-lock"></i></div>
+          <h3>Sécurisé HTTPS</h3>
+          <p>SSL, sauvegardes automatiques, protection anti-malware.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Livraison 2 Semaines</h3>
+          <p>Site vitrine livré en 10–15 jours ouvrés. Planning respecté.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-headset"></i></div>
+          <h3>Support 6 Mois</h3>
+          <p>Maintenance et support inclus 6 mois après livraison.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. OFFRES / PRICING -->
+  <section class="section" style="background:var(--violet)">
+    <div class="container">
+      <h2 class="section-title" style="color:#fff">Nos Formules Web</h2>
+      <div class="grid-3">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Site Vitrine</h3>
+            <div class="pricing-price">4 900 <span>MAD</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Jusqu'à 8 pages</li>
+            <li><i class="fa-solid fa-check"></i> Design sur mesure</li>
+            <li><i class="fa-solid fa-check"></i> Mobile responsive</li>
+            <li><i class="fa-solid fa-check"></i> Formulaire de contact</li>
+            <li><i class="fa-solid fa-check"></i> SEO de base</li>
+            <li><i class="fa-solid fa-check"></i> Score PageSpeed 85+</li>
+            <li><i class="fa-solid fa-check"></i> Livraison 10 jours</li>
+          </ul>
+          <button data-modal-open class="btn-primary btn-full">Commander</button>
+        </div>
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-badge">Populaire</div>
+          <div class="pricing-header">
+            <h3>Site E-commerce</h3>
+            <div class="pricing-price">12 000 <span>MAD</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> WooCommerce ou Shopify</li>
+            <li><i class="fa-solid fa-check"></i> Catalogue illimité</li>
+            <li><i class="fa-solid fa-check"></i> Paiement en ligne</li>
+            <li><i class="fa-solid fa-check"></i> Gestion stocks</li>
+            <li><i class="fa-solid fa-check"></i> SEO complet</li>
+            <li><i class="fa-solid fa-check"></i> Livraison 4 semaines</li>
+          </ul>
+          <button data-modal-open class="btn-primary btn-full">Commander</button>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Application Web</h3>
+            <div class="pricing-price">Sur <span>devis</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> React / Next.js</li>
+            <li><i class="fa-solid fa-check"></i> Base de données</li>
+            <li><i class="fa-solid fa-check"></i> API REST</li>
+            <li><i class="fa-solid fa-check"></i> Authentification</li>
+            <li><i class="fa-solid fa-check"></i> Dashboard admin</li>
+            <li><i class="fa-solid fa-check"></i> Architecture scalable</li>
+          </ul>
+          <button data-modal-open class="btn-primary btn-full">Demander un devis</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TIMELINE PROCESSUS -->
+  <section class="section section--light">
+    <div class="container">
+      <h2 class="section-title">Comment Ça Marche ?</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"><span>1</span></div>
+          <div class="timeline-content">
+            <h3>Jour 1 — Briefing</h3>
+            <p>Appel découverte, recueil des besoins, définition du cahier des charges.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"><span>2</span></div>
+          <div class="timeline-content">
+            <h3>Jours 2–3 — Maquette</h3>
+            <p>Wireframes et maquette graphique soumis pour validation.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"><span>3</span></div>
+          <div class="timeline-content">
+            <h3>Jours 4–10 — Développement</h3>
+            <p>Intégration, contenu, SEO technique, tests cross-browser.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"><span>4</span></div>
+          <div class="timeline-content">
+            <h3>Jour 11 — Révisions</h3>
+            <p>2 rounds de révisions inclus. Ajustements selon vos retours.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"><span>5</span></div>
+          <div class="timeline-content">
+            <h3>Jour 12–15 — Livraison</h3>
+            <p>Mise en production, formation CMS, documentation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FAQ -->
+  <section class="section section--light">
+    <div class="container container--narrow">
+      <h2 class="section-title">Questions Fréquentes</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            Que se passe-t-il après livraison ?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>Support technique 6 mois inclus. Formation à l'utilisation du CMS. Contrat de maintenance mensuelle disponible à 500 MAD/mois.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            Puis-je modifier moi-même le contenu ?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>Oui. Tous nos sites WordPress sont livrés avec une formation de 1h et un guide d'utilisation. Vous gérez textes et images en autonomie.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            Hébergement inclus ?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>L'hébergement n'est pas inclus mais nous vous guidons vers les meilleurs fournisseurs (OVH, Hostinger). Budget estimé : 500–1 500 MAD/an.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            Proposez-vous des sites en arabe ?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>Oui. Sites bilingues FR/AR avec gestion du sens de lecture RTL (droite à gauche). Surcoût : 1 500 MAD.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA FINAL -->
+  <section class="section section--cta" style="background:var(--blue)">
+    <div class="container" style="text-align:center">
+      <h2 class="section-title" style="color:#fff">Votre Site en 2 Semaines</h2>
+      <div class="hero-ctas" style="justify-content:center">
+        <button data-modal-open class="btn-primary btn-lg">Démarrer mon projet</button>
+        <a href="portfolio.html" class="btn-outline-white btn-lg">Voir des exemples</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" style="display:inline-block;margin-bottom:1rem"><span style="font-weight:800;font-size:1.4rem;color:#fff">FADIZ<span style="color:#a78bfa">.</span></span></a>
+      <p>Agence digitale B2B — Kénitra, Maroc.</p>
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/212663893696" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="service-web.html">Sites web</a></li>
+        <li><a href="service-ads.html">Google Ads</a></li>
+        <li><a href="geo-seo.html">GEO / SEO</a></li>
+        <li><a href="service-erp.html">ERP &amp; CRM</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Agence</h4>
+      <ul>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><i class="fa-solid fa-location-dot"></i> 31 Rue Martir Abdeslam, Bureau N°2, Val Fleury, Kénitra 14000</li>
+        <li><a href="tel:+212663893696"><i class="fa-solid fa-phone"></i> +212 663 893 696</a></li>
+        <li><a href="mailto:contact@fadiz.agency"><i class="fa-solid fa-envelope"></i> contact@fadiz.agency</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 FADIZ Agency — FDZ INTERNATIONAL SARL AU. Tous droits réservés.</p>
+    <div>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-confidentialite.html">Confidentialité</a>
+      <a href="cgv.html">CGV</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
